@@ -1,12 +1,14 @@
 object Form1: TForm1
-  Left = 308
-  Height = 292
-  Top = 149
+  Left = 443
+  Height = 310
+  Top = 187
   Width = 489
+  BorderStyle = bsSingle
   Caption = 'Simple Notepad'
-  ClientHeight = 272
+  ClientHeight = 290
   ClientWidth = 489
   Menu = MainMenu1
+  Position = poDesktopCenter
   LCLVersion = '2.0.12.0'
   object Here: TMemo
     Left = 0
@@ -19,17 +21,39 @@ object Form1: TForm1
     TabOrder = 0
   end
   object MainMenu1: TMainMenu
-    Left = 456
+    Left = 376
+    Top = 8
     object MenuItem1: TMenuItem
       Caption = 'File'
       object MenuItem2: TMenuItem
         Caption = 'Save'
         OnClick = MenuItem2Click
       end
+      object MenuItem6: TMenuItem
+        Caption = 'Open'
+        OnClick = MenuItem6Click
+      end
       object MenuItem3: TMenuItem
         Caption = 'Close'
         OnClick = MenuItem3Click
       end
     end
+    object MenuItem4: TMenuItem
+      Caption = 'Help'
+      object MenuItem5: TMenuItem
+        Caption = 'AAAA HELP ME'
+        OnClick = MenuItem5Click
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'text |*.txt'
+    Left = 403
+    Top = 87
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'TXT|*.txt'
+    Left = 317
+    Top = 62
   end
 end
